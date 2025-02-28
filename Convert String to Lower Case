@@ -1,0 +1,16 @@
+class Solution {
+    static String toLower(String str) {
+        // code here
+         StringBuilder str1 = new StringBuilder();
+        for(int i = 0;i<str.length();i++){
+            char ch  = str.charAt(i);
+            if(ch>='A' && ch<='Z'){
+                str1.append((char)( ch + 32));
+            }else{
+                str1.append(ch);
+            }
+        }
+        return str1.toString();
+     
+    }
+}
