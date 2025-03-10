@@ -1,0 +1,14 @@
+public static void difference(int n1, int n2){
+    
+    //Write your code here
+    
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i <= 10; i++) {
+            result.append((n1 * i) - (n2 * i));
+            if (i < 10) {
+                result.append(" ");
+            }
+        }
+        System.out.print(result);
+    
+}
