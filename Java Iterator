@@ -1,0 +1,23 @@
+
+class Solution {
+    static ArrayList<Integer> javaIterator(int n, int k, int[] arr) {
+        // code here
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int num : arr) {
+            list.add(num);
+        }
+
+ 
+        Iterator<Integer> it = list.iterator();
+        while (it.hasNext()) {
+            if (it.next() < k) {
+                it.remove();
+            }
+        }
+
+    
+        Collections.sort(list);
+        
+        return list;
+    }
+};
