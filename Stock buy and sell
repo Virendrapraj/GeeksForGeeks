@@ -1,0 +1,18 @@
+public class stockBuyandSell {
+    public static void main(String[] args) {
+        int arr[] = {1,4,3,2,7,6,9,8};
+        int buyPrice =Integer.MAX_VALUE;
+        int maxProfit =0;
+
+
+        for (int i = 0;i< arr.length;i++) {
+            if (buyPrice < arr[i]) {
+                int profit = arr[i] -buyPrice ;
+                maxProfit = Math.max(maxProfit, profit);
+            } else {
+                buyPrice = arr[i];
+            }
+        }
+        System.out.println(maxProfit);
+    }
+}
